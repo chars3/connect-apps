@@ -10,10 +10,25 @@
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 0.2fr 1fr 0.2fr 1fr;
     grid-gap: 10px;
     padding: 20px;
     /* ajuste o espaçamento entre os elementos conforme necessário */
+}
+
+.anchor{
+    background-color: blue;
+    height: 400px;
+}
+
+.l-pt-1, .l-pt-2{
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.bordered {
+    border: 1px solid black;
 }
 
 .left-apps,
@@ -21,16 +36,17 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    border: solid 1px;
 }
 
 .app-container{
     display: flex;
     flex-direction: column;
     height: 400px; /* 80px (height of each app) * 5 apps = 400px */
-    /* overflow-y: scroll; */
+    overflow-y: scroll; 
 }
 
-.app{
+.l-app, .r-app{
     background-color: aqua;
     height: 80px;
     flex-shrink: 0;
@@ -46,7 +62,7 @@
 
 .fiqon{
     width: 300px;
-    height: 100px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
